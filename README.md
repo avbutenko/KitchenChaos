@@ -1,2 +1,2 @@
 # KitchenChaos
-Educational project from https://unitycodemonkey.com/
+Educational project from https://unitycodemonkey.com/kitchenchaoscourse.php
