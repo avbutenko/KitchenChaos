@@ -9,7 +9,7 @@ public class GameInput : MonoBehaviour
 
     private const string PLAYER_PREFS_BINDINGS = "InputBindings";
     public static GameInput Instance { get; private set; }
-    public event EventHandler OnIntercatAction;
+    public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
     public event EventHandler OnPauseAction;
     public event EventHandler OnBindingRebind;
@@ -57,7 +57,7 @@ public class GameInput : MonoBehaviour
 
     private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        OnIntercatAction?.Invoke(this, EventArgs.Empty);
+        OnInteractAction?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector2 GetMovementVectorNormalized()

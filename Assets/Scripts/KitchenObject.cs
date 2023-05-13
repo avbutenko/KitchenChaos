@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class KitchenObject : NetworkBehaviour
 {
+
+
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
+
 
     private IKitchenObjectParent kitchenObjectParent;
     private FollowTransform followTransform;
+
 
     protected virtual void Awake()
     {
@@ -46,7 +50,7 @@ public class KitchenObject : NetworkBehaviour
 
         if (kitchenObjectParent.HasKitchenObject())
         {
-            Debug.LogError("KitchenObjectParent already has a KitchenObject!");
+            Debug.LogError("IKitchenObjectParent already has a KitchenObject!");
         }
 
         kitchenObjectParent.SetKitchenObject(this);
@@ -83,6 +87,8 @@ public class KitchenObject : NetworkBehaviour
         }
     }
 
+
+
     public static void SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
     {
         KitchenGameMultiplayer.Instance.SpawnKitchenObject(kitchenObjectSO, kitchenObjectParent);
@@ -92,4 +98,5 @@ public class KitchenObject : NetworkBehaviour
     {
         KitchenGameMultiplayer.Instance.DestroyKitchenObject(kitchenObject);
     }
+
 }
