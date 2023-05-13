@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f8da6075284fa4380a5411372bab13, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d97940af2c0d7d4783c9b5e340ebd13, type: 3}
   m_Name: _KitchenObjectListSO
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 8af766aa9b4e9a74aaf3634566e0b93a, type: 2}
-  - {fileID: 11400000, guid: 700f0da598c3bad46a4fd80868f62d29, type: 2}
-  - {fileID: 11400000, guid: 782808932470a8d45922fe6237f76db0, type: 2}
-  - {fileID: 11400000, guid: a72da963bd548a94e900c9df45e15c12, type: 2}
-  - {fileID: 11400000, guid: 49c399a8fb3c76d408192b51163992f8, type: 2}
-  - {fileID: 11400000, guid: 333f2eea462997e46884b7299a3b7602, type: 2}
-  - {fileID: 11400000, guid: e7337d590c13f394f974f554e734e4cf, type: 2}
-  - {fileID: 11400000, guid: fbdcc529949072d458e693851ee73765, type: 2}
-  - {fileID: 11400000, guid: 733ff3cad34b10548969716b86690c19, type: 2}
-  - {fileID: 11400000, guid: 16a495b6d7d8da2438d786b1fee26890, type: 2}
-  - {fileID: 11400000, guid: 3066032206a8c624192960c8ae033e87, type: 2}
+  - {fileID: 11400000, guid: dc7206a372e873e44945cb9155f8c1ba, type: 2}
+  - {fileID: 11400000, guid: eb5d66fe5fbe79b4da16b49136928aa4, type: 2}
+  - {fileID: 11400000, guid: caea38706d21dfa40a744b22f2f86434, type: 2}
+  - {fileID: 11400000, guid: 8fd6ae235d3fd22418d2f744dee1a974, type: 2}
+  - {fileID: 11400000, guid: 8119098929e2ba14baf2c6ad491cf05e, type: 2}
+  - {fileID: 11400000, guid: b01aa11918052354fa65a950245d8dec, type: 2}
+  - {fileID: 11400000, guid: c2481a7688752a94582d77f514752584, type: 2}
+  - {fileID: 11400000, guid: e1a992a9fc8e0034894b898a3970c45f, type: 2}
+  - {fileID: 11400000, guid: c2b29260396631a4792f2e3e10773a1d, type: 2}
+  - {fileID: 11400000, guid: 0a615e1c7288587449871fd434e85ab6, type: 2}
+  - {fileID: 11400000, guid: 455ac2b492a3c3442bf926b427bb40d2, type: 2}
