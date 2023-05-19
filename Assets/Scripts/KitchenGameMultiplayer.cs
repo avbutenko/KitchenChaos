@@ -140,6 +140,23 @@ public class KitchenGameMultiplayer : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    public void IncreasePlayerScoreServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        int playerDataIndex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
+
+        PlayerData playerData = playerDataNetworkList[playerDataIndex];
+
+        playerData.playerScore++;
+
+        playerDataNetworkList[playerDataIndex] = playerData;
+    }
+
+    public NetworkList<PlayerData> GetPlayersList()
+    {
+        return playerDataNetworkList;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
     private void SetPlayerIdServerRpc(string playerId, ServerRpcParams serverRpcParams = default)
     {
         int playerDataIndex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);

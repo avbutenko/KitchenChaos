@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Netcode;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +11,10 @@ public class GameOverUI : MonoBehaviour
 {
 
 
-    [SerializeField] private TextMeshProUGUI recipesDeliveredText;
+    //[SerializeField] private TextMeshProUGUI recipesDeliveredText;
     [SerializeField] private Button playAgainButton;
+    [SerializeField] private Transform resultContainer;
+    [SerializeField] private Transform resultTemplate;
 
 
     private void Awake()
@@ -34,12 +38,28 @@ public class GameOverUI : MonoBehaviour
         if (KitchenGameManager.Instance.IsGameOver())
         {
             Show();
-
-            recipesDeliveredText.text = DeliveryManager.Instance.GetSuccessfulRecipesAmount().ToString();
+            UpdateResults();
+            //recipesDeliveredText.text = DeliveryManager.Instance.GetSuccessfulRecipesAmount().ToString();
         }
         else
         {
             Hide();
+        }
+    }
+
+    private void UpdateResults()
+    {
+        foreach (Transform child in resultContainer)
+        {
+            if (child == resultTemplate) continue;
+            Destroy(child.gameObject);
+        }
+
+        foreach (PlayerData playerData in KitchenGameMultiplayer.Instance.GetPlayersList())
+        {
+            Transform resultTransform = Instantiate(resultTemplate, resultContainer);
+            resultTransform.gameObject.SetActive(true);
+            resultTransform.GetComponent<ResultSingleUI>().SetResults(playerData.playerName.ToString(), playerData.playerScore);
         }
     }
 
